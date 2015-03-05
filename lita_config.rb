@@ -10,7 +10,7 @@ Lita.configure do |config|
   # Messages at the selected level and above will be logged.
   config.robot.log_level = :info
 
-  config.redis[:host] = ENV.fetch("REDISTOGO_URL", "localhost")
+  config.redis[:url] = ENV.fetch("REDISTOGO_URL", "redis://localhost")
 
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
