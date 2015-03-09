@@ -12,4 +12,10 @@ gem "lita-slack"
 gem "lita-google-images"
 gem "lita-karma"
 
+gem "lita-ascii-art"
+gem "lita-catgif"
+gem "lita-excuses"
+gem "lita-google"
+gem "lita-shipit"
+gem "lita-xkcd"
 
