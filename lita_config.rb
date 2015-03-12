@@ -1,4 +1,4 @@
-require './lita-karma/lib/lita-karma'
+require_relative 'plugins/karma/lib/lita-karma'
 
 Lita.configure do |config|
   # The name your robot will use.
