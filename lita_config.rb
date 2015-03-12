@@ -1,6 +1,6 @@
 Lita.configure do |config|
   # The name your robot will use.
-  config.robot.name = "Turbot"
+  config.robot.name = "Not Turbot"
 
   # The locale code for the language to use.
   # config.robot.locale = :en

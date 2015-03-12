@@ -1,3 +1,9 @@
+PATH
+  remote: ./lita-karma
+  specs:
+    lita-karma (0.0.1)
+      lita (>= 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,8 +43,6 @@ GEM
     lita-google (1.0.0)
       lita (>= 4.0)
     lita-google-images (2.0.0)
-      lita (>= 4.0)
-    lita-karma (3.0.1)
       lita (>= 4.0)
     lita-shipit (0.0.1)
       lita (>= 4.0)
@@ -80,7 +84,7 @@ DEPENDENCIES
   lita-excuses
   lita-google
   lita-google-images
-  lita-karma
+  lita-karma!
   lita-shipit
   lita-slack
   lita-xkcd
