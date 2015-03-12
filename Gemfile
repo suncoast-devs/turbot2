@@ -17,4 +17,4 @@ gem "lita-google"
 gem "lita-shipit"
 gem "lita-xkcd"
 
-gem "lita-karma", path: './lita-karma'
+gem "lita-karma", path: 'lita-karma'
