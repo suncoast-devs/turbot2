@@ -38,7 +38,3 @@ describe Lita::Handlers::Karma, lita_handler: true do
     expect(replies.last).to eq ":dromedary_camel: @turbot's a karma sluggin juggernaut :dromedary_camel:"
   end
 end
-
-
-# >> Lita::User.find_by_id('U03QUJQ7W')
-# => #<Lita::User:0x007fe1e9bd6528 @id="U03QUJQ7W", @metadata={"mention_name"=>"tylerjohnst", "name"=>"Tyler Johnston"}, @name="Tyler Johnston">
