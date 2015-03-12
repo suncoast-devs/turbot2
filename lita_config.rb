@@ -2,7 +2,7 @@ require_relative 'plugins/karma/lib/lita-karma'
 
 Lita.configure do |config|
   # The name your robot will use.
-  config.robot.name = "Not Turbot"
+  config.robot.name = "Turbot"
 
   # The locale code for the language to use.
   # config.robot.locale = :en
