@@ -2,13 +2,8 @@ module Lita
   module Handlers
     class Karma < Handler
 
-      route(/.*/, :log)
-      route(/(\$\w*)\+\+/, :increment_karma)
-      route(/(\$\w*)--/,   :decrement_karma)
-
-      def log(response)
-        puts response.message.body
-      end
+      route(/<@(\w*)>\+\+/, :increment_karma)
+      route(/<@(\w*)>--/,   :decrement_karma)
 
       def increment_karma(response)
         incrementer(response, &:increment!)
@@ -75,6 +70,10 @@ class Incrementer
   end
 
   def username
+    "@" + Lita::User.find_by_id(user_id).mention_name
+  end
+
+  def user_id
     @response.pattern.match(@response.message.body)[1]
   end
 end
