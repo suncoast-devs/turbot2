@@ -2,8 +2,8 @@ module Lita
   module Handlers
     class Karma < Handler
 
-      route(/(@\w*)\+\+/, :increment_karma)
-      route(/(@\w*)--/,   :decrement_karma)
+      route(/(\$\w*)\+\+/, :increment_karma)
+      route(/(\$\w*)--/,   :decrement_karma)
 
       def increment_karma(response)
         incrementer(response, &:increment!)
