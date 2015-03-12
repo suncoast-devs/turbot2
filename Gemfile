@@ -16,5 +16,3 @@ gem "lita-excuses"
 gem "lita-google"
 gem "lita-shipit"
 gem "lita-xkcd"
-
-gem "lita-karma", path: 'lita-karma'
