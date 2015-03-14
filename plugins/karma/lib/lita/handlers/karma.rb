@@ -3,21 +3,10 @@ module Lita
     class Karma < Handler
 
       route(/<@(\w*)>\+\+/, :increment_karma)
-      route(/<@(\w*)>--/,   :decrement_karma)
 
       def increment_karma(response)
-        incrementer(response, &:increment!)
-      end
-
-      def decrement_karma(response)
-        incrementer(response, &:decrement!)
-      end
-
-      private
-
-      def incrementer(response, &block)
-        Incrementer.new(response, self, redis).tap do |incrementer|
-          yield(incrementer)
+        Incrementer.new(response, self).tap do |incrementer|
+          incrementer.increment!
           response.reply incrementer.reply
         end
       end
@@ -29,18 +18,14 @@ end
 
 class Incrementer
 
-  def initialize(response, handler, redis)
+  def initialize(response, handler)
     @handler = handler
     @response = response
-    @redis = redis
+    @redis = handler.redis
   end
 
   def increment!
     @redis.incr redis_key
-  end
-
-  def decrement!
-    @redis.decr redis_key
   end
 
   def reply

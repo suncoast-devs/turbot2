@@ -9,18 +9,9 @@ describe Lita::Handlers::Karma, lita_handler: true do
     send_message("<@AAAAAAAA>++")
   end
 
-  def decrement
-    send_message("<@AAAAAAAA>--")
-  end
-
   it 'increments someones karma when they are @mentioned with a ++' do
     increment
     expect(replies.last).to eq "@turbot's now: 1"
-  end
-
-  it 'decrements someones karma when they are @mentioned with a --' do
-    decrement
-    expect(replies.last).to eq "@turbot's now: -1"
   end
 
   it 'sums the increments as they come in' do
