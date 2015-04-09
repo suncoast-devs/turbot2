@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/suncoast-devs/turbot-internet-points.git
-  revision: 2769369f9b0455831ded8edb8541149c2d8ace8f
+  revision: 2a7e720f3c1a2ac8f473dff3e4319fa4ef4e8dca
   specs:
     lita-turbot-internet-points (0.1.0)
       lita (>= 4.3)
