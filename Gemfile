@@ -16,3 +16,5 @@ gem "lita-excuses"
 gem "lita-google"
 gem "lita-shipit"
 gem "lita-xkcd"
+
+gem 'lita-turbot-internet-points', github: 'suncoast-devs/turbot-internet-points'

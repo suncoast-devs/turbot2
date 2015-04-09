@@ -1,5 +1,3 @@
-require_relative 'plugins/karma/lib/lita-karma'
-
 Lita.configure do |config|
   # The name your robot will use.
   config.robot.name = "Turbot"
@@ -20,4 +18,3 @@ Lita.configure do |config|
 
   config.adapters.slack.token = ENV.fetch("SLACK_TOKEN", "")
 end
-
