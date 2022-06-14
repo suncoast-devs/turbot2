@@ -1,6 +1,23 @@
 GIT
-  remote: git://github.com/suncoast-devs/turbot-internet-points.git
-  revision: 2a7e720f3c1a2ac8f473dff3e4319fa4ef4e8dca
+  remote: https://github.com/gstark/lita.git
+  revision: 505e2e1df08b08d98e0aababc659071f2b900be2
+  ref: pipelined
+  specs:
+    lita (5.0.0)
+      bundler (~> 2.2)
+      faraday (~> 1.6.0)
+      http_router (~> 0.11.2)
+      i18n (~> 1.8.10)
+      ice_nine (~> 0.11.2)
+      puma (~> 5.4.0)
+      rack (~> 2.2.3)
+      rb-readline (~> 0.5.5)
+      redis-namespace (~> 1.8.1)
+      thor (~> 1.1.0)
+
+GIT
+  remote: https://github.com/suncoast-devs/turbot-internet-points.git
+  revision: 1f1f4bd02d5d957d56e4686152f1fc51800c5fe4
   specs:
     lita-turbot-internet-points (0.1.0)
       lita (>= 4.3)
@@ -8,84 +25,98 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    artii (2.1.1)
-    dotenv (2.0.1)
-    eventmachine (1.0.7)
-    faraday (0.9.1)
+    artii (2.1.2)
+    concurrent-ruby (1.1.10)
+    dotenv (2.7.6)
+    eventmachine (1.2.7)
+    faraday (1.6.0)
+      faraday-em_http (~> 1.0)
+      faraday-em_synchrony (~> 1.0)
+      faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0.1)
+      faraday-net_http (~> 1.0)
+      faraday-net_http_persistent (~> 1.1)
+      faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
       multipart-post (>= 1.2, < 3)
-    faye-websocket (0.9.2)
+      ruby2_keywords (>= 0.0.4)
+    faraday-em_http (1.0.0)
+    faraday-em_synchrony (1.0.0)
+    faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
+    faraday-net_http (1.0.1)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
+    faye-websocket (0.11.1)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
-    http_router (0.11.1)
+    http_router (0.11.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
-    i18n (0.7.0)
-    ice_nine (0.11.1)
-    lita (4.3.2)
-      bundler (>= 1.3)
-      faraday (>= 0.8.7)
-      http_router (>= 0.11.1)
-      i18n (>= 0.6.9)
-      ice_nine (>= 0.11.0)
-      multi_json (>= 1.7.7)
-      puma (>= 2.7.1)
-      rack (>= 1.5.2)
-      rb-readline (>= 0.5.1)
-      redis-namespace (>= 1.3.0)
-      thor (>= 0.18.1)
-    lita-ascii-art (0.0.3)
+    i18n (1.8.11)
+      concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
+    lita-ascii-art (0.1.0)
       artii (>= 2.0.4)
-      lita (>= 3.0.0)
+      lita (>= 4.0.0)
     lita-catgif (0.0.2)
       lita (>= 2.6)
     lita-excuses (0.0.6)
       lita (>= 2.2)
       nokogiri
-    lita-google (1.0.0)
+    lita-google (1.1.0)
       lita (>= 4.0)
-    lita-google-images (2.0.0)
+    lita-shipit (0.2.0)
       lita (>= 4.0)
-    lita-shipit (0.0.1)
-      lita (>= 4.0)
-    lita-slack (1.2.0)
+    lita-slack (1.8.0)
       eventmachine
       faraday
       faye-websocket (>= 0.8.0)
-      lita (>= 4.0.4)
+      lita (>= 4.7.1)
       multi_json
-    lita-xkcd (0.0.5)
+    lita-xkcd (0.0.6)
       lita (>= 2.2)
-    mini_portile (0.6.2)
-    multi_json (1.11.0)
-    multipart-post (2.0.0)
-    nokogiri (1.6.6.2)
-      mini_portile (~> 0.6.0)
-    puma (2.11.1)
-      rack (>= 1.1, < 2.0)
-    rack (1.6.0)
-    rb-readline (0.5.2)
-    redis (3.2.1)
-    redis-namespace (1.5.2)
-      redis (~> 3.0, >= 3.0.4)
-    thor (0.19.1)
+    mini_portile2 (2.8.0)
+    multi_json (1.15.0)
+    multipart-post (2.2.3)
+    nio4r (2.5.8)
+    nokogiri (1.13.6)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    puma (5.4.0)
+      nio4r (~> 2.0)
+    racc (1.6.0)
+    rack (2.2.3.1)
+    rb-readline (0.5.5)
+    redis (4.6.0)
+    redis-namespace (1.8.2)
+      redis (>= 3.0.4)
+    ruby2_keywords (0.0.5)
+    thor (1.1.0)
     url_mount (0.2.1)
       rack
-    websocket-driver (0.5.4)
+    websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
+    websocket-extensions (0.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   dotenv
-  lita
+  lita!
   lita-ascii-art
   lita-catgif
   lita-excuses
   lita-google
-  lita-google-images
   lita-shipit
   lita-slack
   lita-turbot-internet-points!
   lita-xkcd
+
+RUBY VERSION
+   ruby 3.1.2p20
+
+BUNDLED WITH
+   2.3.15
