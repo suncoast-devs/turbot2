@@ -10,7 +10,7 @@ Lita.configure do |config|
   # Messages at the selected level and above will be logged.
   config.robot.log_level = ENV.fetch("ROBOT_LOG_LEVEL", "info").to_sym
 
-  config.redis[:url] = ENV.fetch("REDISTOGO_URL", "redis://localhost")
+  config.redis[:url] = ENV.fetch("REDIS_URL", "redis://localhost")
 
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
@@ -18,3 +18,4 @@ Lita.configure do |config|
 
   config.adapters.slack.token = ENV.fetch("SLACK_TOKEN", "")
 end
+
